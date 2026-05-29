@@ -1,0 +1,9 @@
+{
+  "name": "Virtual Smartphone",
+  "description": "A high-performance virtual smartphone simulation featuring 30 functional apps and 10 interactive games including PUBG, FC Mobile, and YouTube, styled with a modern OS interface.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
