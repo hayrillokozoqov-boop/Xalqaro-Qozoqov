@@ -9,15 +9,31 @@ import { Target, Trophy, Award, Settings, Play, ShieldAlert, Sparkles, RefreshCw
 // Full roster of international superstar and local Uzbek heroes
 const ALL_PLAYERS_POOL = [
   { id: 'r9', name: 'Ronaldo Nazário', country: '🇧🇷', ovr: 99, position: 'ST', coinPrice: 2000, gemPrice: 200, category: 'Legendary' },
+  { id: 'pele', name: 'Pelé', country: '🇧🇷', ovr: 99, position: 'ST', coinPrice: 2100, gemPrice: 210, category: 'Legendary' },
+  { id: 'yashin', name: 'Lev Yashin (GK)', country: '🧤', ovr: 98, position: 'GK', coinPrice: 1950, gemPrice: 195, category: 'Legendary' },
   { id: 'ronaldinho', name: 'Ronaldinho Gaúcho', country: '🇧🇷', ovr: 98, position: 'LW', coinPrice: 1900, gemPrice: 190, category: 'Legendary' },
-  { id: 'zlatan', name: 'Zlatan Ibrahimović', country: '🇸🇪', ovr: 96, position: 'ST', coinPrice: 1600, gemPrice: 160, category: 'Legendary' },
+  { id: 'maradona', name: 'Diego Maradona', country: '🇦🇷', ovr: 98, position: 'MC', coinPrice: 2000, gemPrice: 200, category: 'Legendary' },
+  { id: 'casillas', name: 'Iker Casillas (GK)', country: '🇪🇸', ovr: 97, position: 'GK', coinPrice: 1800, gemPrice: 180, category: 'Legendary' },
+  { id: 'zidane', name: 'Zinedine Zidane', country: '🇫🇷', ovr: 97, position: 'MC', coinPrice: 1800, gemPrice: 180, category: 'Legendary' },
   { id: 'mbappe', name: 'Kylian Mbappé', country: '🇫🇷', ovr: 97, position: 'LW', coinPrice: 1800, gemPrice: 180, category: 'Legendary' },
+  { id: 'neymar', name: 'Neymar Jr', country: '🇧🇷', ovr: 96, position: 'LW', coinPrice: 1700, gemPrice: 170, category: 'Legendary' },
+  { id: 'maldini', name: 'Paolo Maldini', country: '🇮🇹', ovr: 96, position: 'CB', coinPrice: 1600, gemPrice: 160, category: 'Legendary' },
+  { id: 'kahn', name: 'Oliver Kahn (GK)', country: '🇩🇪', ovr: 96, position: 'GK', coinPrice: 1650, gemPrice: 165, category: 'Legendary' },
+  { id: 'zlatan', name: 'Zlatan Ibrahimović', country: '🇸🇪', ovr: 96, position: 'ST', coinPrice: 1600, gemPrice: 160, category: 'Legendary' },
   { id: 'ronaldo', name: 'Cristiano Ronaldo', country: '🇵🇹', ovr: 96, position: 'ST', coinPrice: 1500, gemPrice: 150, category: 'Legendary' },
-  { id: 'haaland', name: 'Erling Haaland', country: '🇳🇴', ovr: 96, position: 'ST', coinPrice: 1600, gemPrice: 160, category: 'Legendary' },
+  { id: 'haaland', name: 'Erling Haaland', country: '🇳🇴', ovr: 96, position: 'ST', coinPrice: 1605, gemPrice: 160, category: 'Legendary' },
   { id: 'messi', name: 'Lionel Messi', country: '🇦🇷', ovr: 95, position: 'RW', coinPrice: 1450, gemPrice: 140, category: 'Legendary' },
+  { id: 'ramos', name: 'Sergio Ramos', country: '🇪🇸', ovr: 95, position: 'CB', coinPrice: 1400, gemPrice: 140, category: 'Legendary' },
+  { id: 'courtois', name: 'Thibaut Courtois (GK)', country: '🇧🇪', ovr: 95, position: 'GK', coinPrice: 1400, gemPrice: 140, category: 'Legendary' },
+  { id: 'bale', name: 'Gareth Bale', country: '🏴󠁧󠁢󠁷󠁬󠁳󠁿', ovr: 94, position: 'RW', coinPrice: 1350, gemPrice: 135, category: 'Elite' },
+  { id: 'neuer', name: 'Manuel Neuer (GK)', country: '🇩🇪', ovr: 94, position: 'GK', coinPrice: 1350, gemPrice: 135, category: 'Elite' },
+  { id: 'vandersar', name: 'Edwin van der Sar (GK)', country: '🇳🇱', ovr: 94, position: 'GK', coinPrice: 1300, gemPrice: 130, category: 'Elite' },
+  { id: 'buffon', name: 'Gianluigi Buffon (GK)', country: '🇮🇹', ovr: 94, position: 'GK', coinPrice: 1300, gemPrice: 130, category: 'Elite' },
   { id: 'bellingham', name: 'Jude Bellingham', country: '🏴󠁧󠁢󠁥󠁮󠁧󠁿', ovr: 94, position: 'MC', coinPrice: 1300, gemPrice: 130, category: 'Elite' },
   { id: 'vinicius', name: 'Vinícius Júnior', country: '🇧🇷', ovr: 94, position: 'LW', coinPrice: 1350, gemPrice: 135, category: 'Elite' },
   { id: 'debruyne', name: 'Kevin De Bruyne', country: '🇧🇪', ovr: 93, position: 'MC', coinPrice: 1250, gemPrice: 125, category: 'Elite' },
+  { id: 'hazard', name: 'Eden Hazard', country: '🇧🇪', ovr: 93, position: 'LW', coinPrice: 1200, gemPrice: 120, category: 'Elite' },
+  { id: 'modric', name: 'Luka Modrić', country: '🇭🇷', ovr: 92, position: 'MC', coinPrice: 1150, gemPrice: 115, category: 'Elite' },
   { id: 'salah', name: 'Mohamed Salah', country: '🇪🇬', ovr: 92, position: 'RW', coinPrice: 1100, gemPrice: 110, category: 'Elite' },
   { id: 'kane', name: 'Harry Kane', country: '🏴󠁧󠁢󠁥󠁮󠁧󠁿', ovr: 91, position: 'ST', coinPrice: 1000, gemPrice: 100, category: 'Elite' },
   { id: 'shomurodov', name: 'Eldor Shomurodov', country: '🇺🇿', ovr: 88, position: 'ST', coinPrice: 800, gemPrice: 80, category: 'Uzbek Star' },
@@ -164,7 +180,7 @@ export default function DLSApp() {
       setGems(g => g - player.gemPrice);
     }
 
-    setOwnedPlayerIds(prev => [...prev, player.id]);
+    setOwnedPlayerIds(prev => Array.from(new Set([...prev, player.id])));
     showNotification(`✅ ${player.name} sotib olindi! Tarkibingizga kiriting.`);
   };
   
@@ -247,7 +263,7 @@ export default function DLSApp() {
   const handleClaimScouted = () => {
     if (scoutedPlayer) {
       if (!ownedPlayerIds.includes(scoutedPlayer.id)) {
-        setOwnedPlayerIds(prev => [...prev, scoutedPlayer.id]);
+        setOwnedPlayerIds(prev => Array.from(new Set([...prev, scoutedPlayer.id])));
       }
       showNotification(`🎉 ${scoutedPlayer.name} zaxirangizga muvaffaqiyatli qo'shildi!`);
       setScoutedPlayer(null);
@@ -493,14 +509,14 @@ export default function DLSApp() {
                     </div>
                     
                     <div className="grid grid-cols-2 gap-1.5 max-h-[100px] overflow-y-auto">
-                      {ownedPlayerIds.map(oId => {
+                      {ownedPlayerIds.map((oId, index) => {
                         const originalP = ALL_PLAYERS_POOL.find(p => p.id === oId);
                         if (!originalP) return null;
                         const isCurrentActive = Object.values(squad).includes(oId);
                         
                         return (
                           <button
-                            key={oId}
+                            key={`${oId}-${index}`}
                             disabled={isCurrentActive}
                             onClick={() => {
                               setSquad(prev => {
@@ -533,12 +549,12 @@ export default function DLSApp() {
                     <span>Taktika: {formation}</span>
                   </div>
                   <div className="flex gap-1.5 overflow-x-auto pb-1 scrollbar-none">
-                    {ownedPlayerIds.map(plId => {
+                    {ownedPlayerIds.map((plId, index) => {
                       const pl = ALL_PLAYERS_POOL.find(p => p.id === plId);
                       if (!pl) return null;
                       const inLineup = Object.values(squad).includes(plId);
                       return (
-                        <div key={plId} className="flex-shrink-0 bg-zinc-950 p-2 rounded-xl border border-white/5 flex flex-col items-center w-[58px] relative">
+                        <div key={`${plId}-${index}`} className="flex-shrink-0 bg-zinc-950 p-2 rounded-xl border border-white/5 flex flex-col items-center w-[58px] relative">
                           {inLineup && (
                             <span className="absolute top-[2px] right-[2px] bg-emerald-500 text-[6px] font-bold px-1 rounded text-black leading-none">FAOL</span>
                           )}
@@ -569,14 +585,14 @@ export default function DLSApp() {
                 <div className="space-y-2">
                   <span className="text-[8px] text-zinc-500 font-bold uppercase tracking-wider block">KLUB TARKIBIDAGI FUTBOLCHILAR:</span>
                   <div className="space-y-1.5 max-h-[190px] overflow-y-auto pr-1">
-                    {ownedPlayerIds.map(plId => {
+                    {ownedPlayerIds.map((plId, index) => {
                       const pl = ALL_PLAYERS_POOL.find(p => p.id === plId);
                       if (!pl) return null;
                       const currentOvr = getPlayerOvr(plId);
                       const upgradeBonus = playerUpgrades[plId] || 0;
                       
                       return (
-                        <div key={plId} className="bg-zinc-900 border border-white/5 p-2 rounded-xl flex items-center justify-between gap-1.5">
+                        <div key={`${plId}-${index}`} className="bg-zinc-900 border border-white/5 p-2 rounded-xl flex items-center justify-between gap-1.5">
                           <div className="flex items-center gap-2">
                             <span className="text-base leading-none">{pl.country}</span>
                             <div>
